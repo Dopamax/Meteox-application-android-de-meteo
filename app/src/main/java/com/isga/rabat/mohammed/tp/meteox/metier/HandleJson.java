@@ -6,7 +6,13 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.TimeZone;
 
 public class HandleJson {
     private String pays;
@@ -15,6 +21,10 @@ public class HandleJson {
     private String pression;
     private String etat;
     private String vent;
+    public static String vitesse_vent;
+    public static String degre_vent;
+    public static String lever_soleil;
+    public static String coucher_soleil;
     public static boolean fetched=false;
     private String urlString=null;
     public boolean finPersing=true;
@@ -84,13 +94,16 @@ public class HandleJson {
             JSONObject weather=reader.getJSONArray("weather").getJSONObject(0);
             etat=weather.getString("description");
             JSONObject sys= reader.getJSONObject("sys");
-            //pays=sys.getString("country");
+            pays=sys.getString("country");
+            lever_soleil=sys.getString("sunrise");
+            coucher_soleil=sys.getString("sunset");
             JSONObject main=reader.getJSONObject("main");
             setTemperature(Double.parseDouble(main.getString("temp")));
-            //humidite=main.getString("humidity");
+            humidite=main.getString("humidity");
             pression=main.getString("pressure");
             JSONObject wind=reader.getJSONObject("wind");
-            vent=wind.getString("speed");
+            vitesse_vent=wind.getString("speed");
+            degre_vent=wind.getString("deg");
             finPersing=false;
 
 
@@ -102,6 +115,13 @@ public class HandleJson {
     static String conversionstreamToString(InputStream is){
         Scanner s=new Scanner(is).useDelimiter("\\A");
         return s.hasNext()? s.next():"";
+    }
+
+    public static String ConversionLeverCoucher(double time){
+        DateFormat dateFormat= new SimpleDateFormat("HH:mm");
+        Date date= new Date();
+        date.setTime((long)time*1000);
+        return dateFormat.format(date);
     }
 
     public void fetchJSON(){

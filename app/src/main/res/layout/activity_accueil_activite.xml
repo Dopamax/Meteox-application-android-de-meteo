@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/theme_principale"
+    android:background="@drawable/night_back"
     >
 
     <LinearLayout
@@ -16,23 +16,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065">
+        app:layout_constraintVertical_bias="0.065"
+        android:background="@drawable/gradient_white_back">
 
         <EditText
             android:id="@+id/localisation"
-            android:layout_width="297dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
-            android:background="@color/white">
+            android:textColor="@color/white">
         </EditText>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_ok"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:backgroundTint="@color/black"
-            android:text="@string/OK">
-
-        </Button>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/white" />
 
     </LinearLayout>
 
@@ -45,6 +49,7 @@
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
         android:gravity="center"
+        android:background="@drawable/gradient_white_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -52,7 +57,8 @@
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="320dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,8 +71,8 @@
                 android:layout_width="190dp"
                 android:layout_height="190dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/roundedcube"
-                android:src="@drawable/sun_warm" />
+                android:src="@mipmap/temps_soleil_foreground"
+                android:background="@drawable/gradient_white_back"/>
 
             <TextView
                 android:id="@+id/etat_meteo"
@@ -76,13 +82,15 @@
                 android:layout_gravity="center"
                 android:textColor="@color/white"
                 android:textSize="50dp"
+                android:background="@drawable/gradient_white_back"
                 android:layout_marginTop="10dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="320dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,13 +107,25 @@
                 android:text="0°C"
                 android:textColor="@color/white"
                 android:textSize="50dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
 
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:text="Pression"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/qte_pression"
@@ -113,7 +133,42 @@
                 android:layout_height="wrap_content"
                 android:text="0 Pa"
                 android:textColor="@color/white"
-                android:textSize="40dp" />
+                android:textSize="17sp" />
+        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="Humidité"
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txt_humidite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 %"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Pays"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/txt_pays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="30dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -133,48 +188,49 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/roundedcube"
-            android:orientation="vertical">
+            android:background="@drawable/gradient_white_back"
+            android:orientation="vertical"
+            >
 
             <ImageButton
-                android:layout_width="180dp"
+                android:id="@+id/btn_coucher_lever"
+                android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/roundedcube"
-                android:src="@drawable/coucher_lever_soleil">
+                android:layout_gravity="center"
+                android:background="@mipmap/dusk_down_foreground">
 
             </ImageButton>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@color/white"
+                android:textColor="@color/white"
                 android:text="Coucher/Lever de soleil"
                 android:textAlignment="center"
-                android:textSize="15dp"/>
+                android:textSize="16dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="@drawable/roundedcube"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/gradient_white_back">
 
             <ImageButton
+                android:id="@+id/vent_btn"
                 android:layout_width="180dp"
                 android:layout_height="140dp"
-                android:background="@drawable/roundedcube"
-                android:src="@drawable/ic_wind_foreground"></ImageButton>
+                android:background="@mipmap/windpng_foreground"></ImageButton>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginTop="8dp"
-                android:background="@color/white"
                 android:text="Vent"
+                android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="15dp" />
+                android:textSize="16dp" />
         </LinearLayout>
 
     </LinearLayout>

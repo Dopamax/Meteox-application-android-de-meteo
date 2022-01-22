@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunsetback"
+    tools:context=".lever_coucher_soleil_activite">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_back_for_soleil_act"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:minHeight="30dp"
+            android:src="@mipmap/backpng_foreground"
+            app:tint="@color/white" />
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingVertical="5dp"
+            android:text="Lever/Coucher de soleil"
+            android:textSize="27sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="411dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@drawable/gradient_white_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_white_back">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Lever : "
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_lever"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:paddingVertical="15dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_white_back">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Coucher : "
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_coucher"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:paddingVertical="15dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

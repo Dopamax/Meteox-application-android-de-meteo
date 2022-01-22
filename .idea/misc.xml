@@ -4,14 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable-v24/ic_search.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/coucher_lever_soleil.xml" value="0.2203125" />
+        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/gradient_white_back.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/ic_soleil_background.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/ic_wind_foreground.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/ic_windicone.xml" value="0.1" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/roundedcube.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/drawable/sun_warm.xml" value="0.2203125" />
-        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/layout/activity_accueil_activite.xml" value="0.12" />
+        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/layout/activity_accueil_activite.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/layout/activity_lever_coucher_soleil_activite.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Documents/5ILDW/Meteox/app/src/main/res/layout/activity_vent_activite.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

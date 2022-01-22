@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.isga.rabat.mohammed.tp.meteox">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,6 +11,12 @@
         android:roundIcon="@mipmap/logoofapp_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Meteox">
+        <activity
+            android:name=".lever_coucher_soleil_activite"
+            android:exported="true" />
+        <activity
+            android:name=".vent_activite"
+            android:exported="true" />
         <activity
             android:name=".AccueilActivite"
             android:exported="true" />
